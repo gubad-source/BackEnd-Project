@@ -1,0 +1,16 @@
+﻿<Window x:Class="Library.Windows.DashboardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library.Windows"
+        mc:Ignorable="d"
+        Title="DashboardWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="BooksBtn" Content="Books" HorizontalAlignment="Left" Margin="73,352,0,0" VerticalAlignment="Top" Click="BooksBtn_Click"/>
+        <Button x:Name="ManagersBtn" Content="Managers" HorizontalAlignment="Left" Margin="188,352,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.66,1.198" Click="ManagersBtn_Click"/>
+        <Button x:Name="CustomersBtn" Content="Customers" HorizontalAlignment="Left" Margin="309,352,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ReportsBtn" Content="Reports" HorizontalAlignment="Left" Margin="441,352,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.271,2.57"/>
+
+    </Grid>
+</Window>

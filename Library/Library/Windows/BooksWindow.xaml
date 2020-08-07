@@ -1,0 +1,40 @@
+﻿<Window x:Class="Library.Windows.BooksWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library.Windows"
+        mc:Ignorable="d"
+        Title="BooksWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="CreateBtn" Visibility="Visible" Content="Button" HorizontalAlignment="Left" Margin="46,368,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.38,12.99" Click="Button_Click"/>
+
+        <DataGrid x:Name="DgbBooks" Margin="271,0,0,0" AutoGenerateColumns="False" CanUserAddRows="False" SelectionChanged="DgbBooks_SelectionChanged">
+            <DataGrid.Columns >
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Ad" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Qiymet" Binding="{Binding Price}"/>
+                <DataGridTextColumn Header="Ref" Binding="{Binding Shelf}"/>
+                <DataGridTextColumn Header="Skaf" Binding="{Binding Bookcase}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="TxtName" HorizontalAlignment="Left" Margin="48,68,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TxtPrice" HorizontalAlignment="Left" Margin="46,147,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Kitabin Adi" HorizontalAlignment="Left" Margin="46,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Kitabin Qiymeti" HorizontalAlignment="Left" Margin="48,91,0,0" VerticalAlignment="Top"/>
+        <Label Content="Saxlandigi Ref" HorizontalAlignment="Left" Margin="48,170,0,0" VerticalAlignment="Top"/>
+        <Label Content="Saxlandigi Skaf" HorizontalAlignment="Left" Margin="48,258,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="CmbShelf" HorizontalAlignment="Left" Margin="48,217,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Path=Shelf}"
+    DisplayMemberPath="Name"
+    SelectedValuePath="Id"
+    SelectedValue="{Binding Path=Shelf}"/>
+        <ComboBox x:Name="CmbBookcase" HorizontalAlignment="Left" Margin="46,289,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Path=Bookcase}"
+    DisplayMemberPath="Name"
+    SelectedValuePath="Id"
+    SelectedValue="{Binding Path=Bookcase}"/>
+        <Button Visibility="Hidden" x:Name="DeleteBtn" Content="Delete" HorizontalAlignment="Left" Margin="108,368,0,0" VerticalAlignment="Top" Click="DeleteBtn_Click"/>
+        <Button Visibility="Hidden" x:Name="UpdateBtn" Content="Update" HorizontalAlignment="Left" Margin="185,368,0,0" VerticalAlignment="Top" Click="UpdateBtn_Click"/>
+
+    </Grid>
+</Window>

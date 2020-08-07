@@ -1,0 +1,27 @@
+﻿<Window x:Class="Library.Windows.CustomersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library.Windows"
+        mc:Ignorable="d"
+        Title="CustomersWindow" Height="450" Width="800">
+    <Grid Margin="10,0,0,0">
+        <Label Content="Name" HorizontalAlignment="Left" Margin="32,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Surname" HorizontalAlignment="Left" Margin="32,83,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TxtName" HorizontalAlignment="Left" Margin="32,41,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TxtSurname" HorizontalAlignment="Left" Margin="32,114,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Visibility="Visible" x:Name="CreateBtn" Content="Button" HorizontalAlignment="Left" Margin="32,165,0,0" VerticalAlignment="Top" Click="CreateBtn_Click"/>
+        <DataGrid x:Name="DgbCustomers" Margin="279,0,0,0" CanUserAddRows="False" AutoGenerateColumns="False" SelectionChanged="DgbCustomers_SelectionChanged">
+            <DataGrid.Columns >
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Surname" Binding="{Binding Surname}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="BtnUpdate" Content="Update" HorizontalAlignment="Left" Margin="32,217,0,0" VerticalAlignment="Top" Visibility="Hidden" Click="BtnUpdate_Click"/>
+        <Button x:Name="BtnDelete" Content="Delete" HorizontalAlignment="Left" Margin="112,217,0,0" VerticalAlignment="Top" Visibility="Hidden" Click="BtnDelete_Click"/>
+
+    </Grid>
+</Window>

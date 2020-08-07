@@ -34,5 +34,11 @@ namespace Library.Windows
             BooksWindow cw = new BooksWindow();
             cw.Show();
         }
+
+        private void CustomersBtn_Click(object sender, RoutedEventArgs e)
+        {
+            CustomersWindow cw = new CustomersWindow();
+                cw.Show();
+        }
     }
 }

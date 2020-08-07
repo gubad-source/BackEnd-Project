@@ -116,9 +116,9 @@ namespace Library.Windows
         private void UpdateBtn_Click(object sender, RoutedEventArgs e)
         {
             _selectedBook.Name = TxtName.Text;
-            _selectedBook.Shelf = TxtShelf.Text;
-            _selectedBook.GroupId = (int)CmbGroups.SelectedValue;
-            _selectedBook.Birthday = (DateTime)DtpBirthday.SelectedDate;
+            _selectedBook.Shelf = (Shelf)CmbShelf.SelectedValue;
+            _selectedBook.Bookcase =(Bookcase) CmbBookcase.SelectedValue;
+            _selectedBook.Price = TxtPrice.Text;
 
             _context.SaveChanges();
 

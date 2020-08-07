@@ -9,7 +9,7 @@
     <Grid>
         <Button x:Name="BooksBtn" Content="Books" HorizontalAlignment="Left" Margin="73,352,0,0" VerticalAlignment="Top" Click="BooksBtn_Click"/>
         <Button x:Name="ManagersBtn" Content="Managers" HorizontalAlignment="Left" Margin="188,352,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.66,1.198" Click="ManagersBtn_Click"/>
-        <Button x:Name="CustomersBtn" Content="Customers" HorizontalAlignment="Left" Margin="309,352,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="CustomersBtn" Content="Customers" HorizontalAlignment="Left" Margin="309,352,0,0" VerticalAlignment="Top" Click="CustomersBtn_Click"/>
         <Button x:Name="ReportsBtn" Content="Reports" HorizontalAlignment="Left" Margin="441,352,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.271,2.57"/>
 
     </Grid>

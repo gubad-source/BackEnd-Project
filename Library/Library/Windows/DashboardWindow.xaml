@@ -11,6 +11,19 @@
         <Button x:Name="ManagersBtn" Content="Managers" HorizontalAlignment="Left" Margin="188,352,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.66,1.198" Click="ManagersBtn_Click"/>
         <Button x:Name="CustomersBtn" Content="Customers" HorizontalAlignment="Left" Margin="309,352,0,0" VerticalAlignment="Top" Click="CustomersBtn_Click"/>
         <Button x:Name="ReportsBtn" Content="Reports" HorizontalAlignment="Left" Margin="441,352,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.271,2.57"/>
+        <Label Content="Customer" HorizontalAlignment="Left" Margin="55,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Book" HorizontalAlignment="Left" Margin="55,84,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="CmbCustomers" HorizontalAlignment="Left" Margin="55,41,0,0" VerticalAlignment="Top" Width="120"  ItemsSource="{Binding Path=Customer}"
+    DisplayMemberPath="Name"
+    SelectedValuePath="Id"
+    SelectedValue="{Binding Path=Customer}"/>
+        <ComboBox x:Name="CmbBooks" HorizontalAlignment="Left" Margin="55,114,0,0" VerticalAlignment="Top" Width="120"  ItemsSource="{Binding Path=Book}"
+    DisplayMemberPath="Name"
+    SelectedValuePath="Id"
+    SelectedValue="{Binding Path=Book}"/>
+        <DatePicker x:Name="DtpDeadLine" HorizontalAlignment="Left" Margin="55,173,0,0" VerticalAlignment="Top"/>
+        <Label Content="DeadLine" HorizontalAlignment="Left" Margin="55,142,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="OrderBtn" Content="Order" HorizontalAlignment="Left" Margin="51,217,0,0" VerticalAlignment="Top" Click="OrderBtn_Click"/>
 
     </Grid>
 </Window>

@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Library.Models;
 
 
+
 namespace Library.Data
 {
     //Library context have been created for project//
@@ -21,6 +22,7 @@ namespace Library.Data
        public  DbSet <Report> Reports { get; set; }
        public DbSet<Shelf> Shelfs { get; set; }
        public DbSet<Bookcase> Bookcases { get; set; }
+        public DbSet<Order> Orders { get; set; }
 
     }
 }

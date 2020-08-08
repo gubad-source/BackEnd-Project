@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library.Windows"
         mc:Ignorable="d"
-        Title="Login" Height="450" Width="800">
+        Title="Login" Height="450" Width="800" Background="#FF5FC37A">
     <Grid>
         <Label Content="User" HorizontalAlignment="Left" Margin="96,35,0,0" VerticalAlignment="Top" Height="30" Width="161"/>
         <TextBox x:Name="UserTxt"  HorizontalAlignment="Left" Margin="96,70,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>

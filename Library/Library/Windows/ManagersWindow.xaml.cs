@@ -29,7 +29,10 @@ namespace Library.Windows
             InitializeComponent();
             _context = new LibraryContext();
             FillManagers();
+            Reset();
         }
+
+        //Reseting means clearing information//
         private void Reset (){
             TxtName.Clear();
             TxtSurname.Clear();
@@ -44,6 +47,7 @@ namespace Library.Windows
             DgbManagers.ItemsSource = _context.Managers.ToList();
         }
 
+        //Validating information//
         private void BtnCreate_Click(object sender, RoutedEventArgs e)
         {
            
@@ -80,6 +84,7 @@ namespace Library.Windows
             //FillManagers();
         }
 
+        //Selection Response//
         private void DgbManagers_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (DgbManagers.SelectedItem == null) return;
@@ -92,6 +97,7 @@ namespace Library.Windows
             BtnUpdate.Visibility = Visibility.Visible;
         }
 
+        //Deleting information//
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
             _context.Managers.Remove(_selectedManager);
@@ -100,6 +106,7 @@ namespace Library.Windows
             Reset();
         }
 
+        //Updating information//
         private void BtnUpdate_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(TxtName.Text))

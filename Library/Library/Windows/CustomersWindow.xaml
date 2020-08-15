@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library.Windows"
         mc:Ignorable="d"
-        Title="CustomersWindow" Height="450" Width="800">
+        Title="CustomersWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="#FF5FC37A" >
     <Grid Margin="10,0,0,0">
         <Label Content="Name" HorizontalAlignment="Left" Margin="32,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Surname" HorizontalAlignment="Left" Margin="32,83,0,0" VerticalAlignment="Top"/>

@@ -11,6 +11,6 @@ namespace Library.Models
         [Required]
         [StringLength(50)]
         public string Name { get; set; }
-        ICollection<Book> Books { get; set; }
+      public  ICollection<Book> Books { get; set; }
     }
 }

@@ -34,6 +34,8 @@ namespace Library.Windows
             FillBookcase();
             FillBooks();
         }
+
+        //(Reset)Returning everything back to its original//
         private void Reset()
         {
             CmbBookcase.SelectedItem = null;
@@ -45,6 +47,8 @@ namespace Library.Windows
             UpdateBtn.Visibility = Visibility.Hidden;
             CreateBtn.Visibility = Visibility.Visible;
         }
+
+        //Filling all comboboxes//
         private void FillShelf()
         {
             CmbShelf.ItemsSource = _context.Shelfs.ToList();
@@ -57,6 +61,8 @@ namespace Library.Windows
         {
             DgbBooks.ItemsSource = _context.Books.ToList();
         }
+
+        //Validating Information//
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(TxtName.Text))
@@ -91,6 +97,7 @@ namespace Library.Windows
             Reset();
         }
 
+        //Selection Response//
         private void DgbBooks_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (DgbBooks == null) return;
@@ -106,6 +113,8 @@ namespace Library.Windows
 
         }
 
+        //Deleting information//
+
         private void DeleteBtn_Click(object sender, RoutedEventArgs e)
         {
             _context.Books.Remove(_selectedBook);
@@ -113,6 +122,7 @@ namespace Library.Windows
             Reset();
         }
 
+        //Updating information//
         private void UpdateBtn_Click(object sender, RoutedEventArgs e)
         {
             _selectedBook.Name = TxtName.Text;

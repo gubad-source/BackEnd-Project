@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library.Windows"
-        mc:Ignorable="d"
-        Title="ManagersWindow" Height="450" Width="800">
+        mc:Ignorable="d" Background="#FF5FC37A" 
+        Title="ManagersWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid Margin="10,0,0,0">
         <Label x:Name="LblName" Content="Name *" HorizontalAlignment="Left" Margin="51,10,0,0" VerticalAlignment="Top" Height="30" Width="78" RenderTransformOrigin="0.431,0.186"/>
         <TextBox x:Name="TxtName" HorizontalAlignment="Left" Margin="51,55,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>

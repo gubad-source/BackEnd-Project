@@ -12,6 +12,7 @@ using System.Windows.Shapes;
 using System.Linq;
 using Library.Data;
 using Library.Models;
+using Library.Windows;
 
 namespace Library.Windows
 {
@@ -21,6 +22,8 @@ namespace Library.Windows
     public partial class DashboardWindow : Window
     {
         private readonly LibraryContext _context;
+        private Book _selectedBook;
+
         //Main window have been created//
         public DashboardWindow()
         {
@@ -28,6 +31,14 @@ namespace Library.Windows
             _context = new LibraryContext();
             FillCustomers();
             FillBooks();
+            FillCmbCustomerReturn();
+           
+        }
+
+       
+        private void FillCmbCustomerReturn()
+        {
+            CmbCustomerReturn.ItemsSource = _context.Customers.ToList();
         }
         private void FillCustomers()
         {
@@ -53,20 +64,40 @@ namespace Library.Windows
         private void CustomersBtn_Click(object sender, RoutedEventArgs e)
         {
             CustomersWindow cw = new CustomersWindow();
-                cw.Show();
+            cw.Show();
         }
 
         private void OrderBtn_Click(object sender, RoutedEventArgs e)
         {
             Order order = new Order()
             {
-                Book=(Book)CmbBooks.SelectedItem,
-                Customer=(Customer)CmbCustomers.SelectedItem,
-                DeadLine=(DateTime)DtpDeadLine.SelectedDate
-                
+                Book = (Book)CmbBooks.SelectedItem,
+                Customer = (Customer)CmbCustomers.SelectedItem,
+                DeadLine = (DateTime)DtpDeadLine.SelectedDate
+
             };
             _context.Orders.Add(order);
+           
             _context.SaveChanges();
+            
         }
+
+        private void CustomerReturnBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (CmbCustomerReturn.SelectedItem == null) return;
+            //_selectedBook =(Book)CmbCustomerReturn.SelectedItem;
+            //ListBox.ItemsSource = _selectedBook.ToString();
+            //CmbCustomerReturn.SelectedItem = "[SELECT*FROM ORDERS WHERE BookId ]";
+            //ListBox.ItemsSource = _context.Orders.Where(o => o.Book = 1);
+
+
+
+        }
+
+        
+
+
+
     }
 }
+

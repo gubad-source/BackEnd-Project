@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library.Windows"
         mc:Ignorable="d"
-        Title="DashboardWindow" Height="450" Width="800">
+        Title="DashboardWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="#FF5FC37A" >
     <Grid>
         <Button x:Name="BooksBtn" Content="Books" HorizontalAlignment="Left" Margin="73,352,0,0" VerticalAlignment="Top" Click="BooksBtn_Click"/>
         <Button x:Name="ManagersBtn" Content="Managers" HorizontalAlignment="Left" Margin="188,352,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.66,1.198" Click="ManagersBtn_Click"/>
@@ -24,6 +24,14 @@
         <DatePicker x:Name="DtpDeadLine" HorizontalAlignment="Left" Margin="55,173,0,0" VerticalAlignment="Top"/>
         <Label Content="DeadLine" HorizontalAlignment="Left" Margin="55,142,0,0" VerticalAlignment="Top"/>
         <Button x:Name="OrderBtn" Content="Order" HorizontalAlignment="Left" Margin="51,217,0,0" VerticalAlignment="Top" Click="OrderBtn_Click"/>
+        <Label Content="Customer Return" HorizontalAlignment="Left" Margin="285,10,0,0" VerticalAlignment="Top"/>
+
+        <Button x:Name="CustomerReturnBtn" Content="ReturnBtn" HorizontalAlignment="Left" Margin="285,84,0,0" VerticalAlignment="Top" Click="CustomerReturnBtn_Click"/>
+        <ComboBox x:Name="CmbCustomerReturn" HorizontalAlignment="Left" Margin="285,47,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Path=Customer}"
+    DisplayMemberPath="Name"
+    SelectedValuePath="Id"
+    SelectedValue="{Binding Path=Customer}" />
+        <ListBox x:Name="ListBox" Margin="285,125,281,156"/>
 
     </Grid>
 </Window>

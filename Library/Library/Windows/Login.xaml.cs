@@ -21,6 +21,7 @@ namespace Library.Windows
         public Login()
         {
             InitializeComponent();
+           
         }
 
         private void Enter_Click(object sender, RoutedEventArgs e)
@@ -41,7 +42,7 @@ namespace Library.Windows
             if (PassTxt.Text=="")
             {
                 MessageBox.Show("Please enter password");
-            }else if (PassTxt.Text == "a")
+            }else if (PassTxt.Text == "admincode")
             {
                 DashboardWindow cw = new DashboardWindow();
                 cw.Show();

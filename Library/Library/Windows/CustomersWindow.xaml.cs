@@ -29,6 +29,8 @@ namespace Library.Windows
             _context = new LibraryContext();
             FillCustomers();
         }
+
+        //(Reset)Returning everything back to its original//
         private void Reset()
         {
             TxtName.Clear();
@@ -38,11 +40,13 @@ namespace Library.Windows
             BtnDelete.Visibility = Visibility.Hidden;
             BtnUpdate.Visibility = Visibility.Hidden;
         }
+        //Filling Comboboxes//
         private void FillCustomers()
         {
             DgbCustomers.ItemsSource = _context.Customers.ToList();
         }
 
+        //Validating information//
         private void CreateBtn_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(TxtName.Text))
@@ -78,6 +82,7 @@ namespace Library.Windows
            
         }
 
+        //Deleting information//
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
             _context.Customers.Remove(_selectedCustomer);
@@ -85,6 +90,7 @@ namespace Library.Windows
             Reset();
         }
 
+        //Updating information//
         private void BtnUpdate_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(TxtName.Text))

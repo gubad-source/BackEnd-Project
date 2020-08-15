@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library.Windows"
         mc:Ignorable="d"
-        Title="BooksWindow" Height="450" Width="800">
+        Title="BooksWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="#FF5FC37A" >
     <Grid>
         <Button x:Name="CreateBtn" Visibility="Visible" Content="Button" HorizontalAlignment="Left" Margin="46,368,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.38,12.99" Click="Button_Click"/>
 
-        <DataGrid x:Name="DgbBooks" Margin="271,0,0,0" AutoGenerateColumns="False" CanUserAddRows="False" SelectionChanged="DgbBooks_SelectionChanged">
+        <DataGrid x:Name="DgbBooks" Margin="271,0,0,0" AutoGenerateColumns="False" CanUserAddRows="False" SelectionChanged="DgbBooks_SelectionChanged"  >
             <DataGrid.Columns >
                 <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="Ad" Binding="{Binding Name}"/>
